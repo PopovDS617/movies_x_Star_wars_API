@@ -9,25 +9,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // function fetchMoviesHandler() {
-  //   fetch("https://swapi.dev/api/films/")
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       console.log(data);
-  //       const transformedMovies = data.results.map((movieData) => {
-  //         return {
-  //           id: movieData.episode_id,
-  //           title: movieData.title,
-  //           openingText: movieData.opening_crawl,
-  //           releaseDate: movieData.release_date,
-  //         };
-  //       });
-  //       setMovies(transformedMovies);
-  //     });
-  // }
-
   const fetchMoviesHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);
@@ -126,3 +107,24 @@ function App() {
 }
 
 export default App;
+
+//вырезанные куски
+
+// function fetchMoviesHandler() {
+//   fetch("https://swapi.dev/api/films/")
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((data) => {
+//       console.log(data);
+//       const transformedMovies = data.results.map((movieData) => {
+//         return {
+//           id: movieData.episode_id,
+//           title: movieData.title,
+//           openingText: movieData.opening_crawl,
+//           releaseDate: movieData.release_date,
+//         };
+//       });
+//       setMovies(transformedMovies);
+//     });
+// }
