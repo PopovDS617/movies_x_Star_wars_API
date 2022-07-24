@@ -35,14 +35,6 @@ function App() {
         });
       }
 
-      // const transformedMovies = data.map((movieData) => {
-      //   return {
-      //     id: movieData.name,
-      //     title: movieData.title,
-      //     openingText: movieData.openingText,
-      //     releaseDate: movieData.releaseDate,
-      //};
-      // });
       setMovies(loadedMovies);
       setIsLoading(false);
     } catch (error) {
@@ -92,41 +84,9 @@ function App() {
       <section>
         <button onClick={fetchMoviesHandler}>Fetch Movies</button>
       </section>
-      <section>
-        {/* {isLoading ? <p>Loading...</p> : <MoviesList movies={movies} />} */}
-        {/* {error && <p>ошибка</p>} */}
-        {/* {!isLoading && movies.length > 0 && <MoviesList movies={movies} />}
-        {!isLoading && movies.length === 0 && !error && <p>Found no movies</p>}
-        {isLoading && <p>Loading...</p>}
-        {!isLoading && error && <p>{error} </p>} */}
-
-        {content}
-      </section>
+      <section>{content}</section>
     </React.Fragment>
   );
 }
 
 export default App;
-
-//вырезанные куски
-
-// function fetchMoviesHandler() {
-//   fetch("https://swapi.dev/api/films/")
-//     .then((response) => {
-//       return response.json();
-//     })
-//     .then((data) => {
-//       console.log(data);
-//       const transformedMovies = data.results.map((movieData) => {
-//         return {
-//           id: movieData.episode_id,
-//           title: movieData.title,
-//           openingText: movieData.opening_crawl,
-//           releaseDate: movieData.release_date,
-//         };
-//       });
-//       setMovies(transformedMovies);
-//     });
-// }
-
-//commit
